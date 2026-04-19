@@ -12,7 +12,12 @@ const mongoose = require('mongoose');
 
 // --- MongoDB Configuration ---
 // Fallback to standard connection string if SRV timeouts continue
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://admin:AforApple900@ac-bl88nlv-shard-00-00.k84lxxl.mongodb.net:27017,ac-bl88nlv-shard-00-01.k84lxxl.mongodb.net:27017,ac-bl88nlv-shard-00-02.k84lxxl.mongodb.net:27017/?ssl=true&authSource=admin&retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGODB_URI;
+
+if (!MONGODB_URI) {
+    console.error('FATAL: MONGODB_URI environment variable is not set!');
+    process.exit(1);
+}
 
 mongoose.connect(MONGODB_URI)
     .then(() => {
