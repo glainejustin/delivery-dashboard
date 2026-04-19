@@ -1,0 +1,82 @@
+[
+  {
+    "id": "van-test",
+    "name": "VAN TEST",
+    "status": "idle",
+    "progress": 100,
+    "direction": "out",
+    "totalTripTime": 30,
+    "isAuto": false,
+    "vanReg": "XXX"
+  },
+  {
+    "id": "test-store",
+    "name": "TEST STORE",
+    "status": "idle",
+    "progress": 3.477297895902367,
+    "direction": "out",
+    "totalTripTime": 3010,
+    "isAuto": true,
+    "vanReg": "HXF"
+  },
+  {
+    "id": "avalon",
+    "name": "AVALON",
+    "status": "idle",
+    "progress": 44.57,
+    "direction": "in",
+    "totalTripTime": 45,
+    "isAuto": false,
+    "vanReg": "HXF"
+  },
+  {
+    "id": "aelia",
+    "name": "AELIA",
+    "status": "idle",
+    "progress": 0,
+    "direction": "in",
+    "totalTripTime": 30,
+    "isAuto": false,
+    "vanReg": "DNJ"
+  },
+  {
+    "id": "chaiwala",
+    "name": "CHAIWALA",
+    "status": "idle",
+    "progress": 0,
+    "direction": "in",
+    "totalTripTime": 20,
+    "isAuto": false,
+    "vanReg": "HXF"
+  },
+  {
+    "id": "moonjiko",
+    "name": "moonjiko",
+    "status": "idle",
+    "progress": 0,
+    "direction": "in",
+    "totalTripTime": 30,
+    "isAuto": false,
+    "vanReg": "TEST-123"
+  },
+  {
+    "id": "dddd",
+    "name": "DDDD",
+    "status": "idle",
+    "progress": 0,
+    "direction": "out",
+    "totalTripTime": 30,
+    "isAuto": false,
+    "vanReg": "FLK"
+  },
+  {
+    "id": "world-duty-free",
+    "name": "WORLD DUTY FREE",
+    "status": "idle",
+    "progress": 0,
+    "direction": "out",
+    "totalTripTime": 30,
+    "isAuto": false,
+    "vanReg": ""
+  }
+]

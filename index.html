@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Tracking Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-anim"></div>
+    <div class="dashboard-container">
+        <header>
+            <h1><span class="brand-text">GXO</span> DELIVERIES</h1>
+            <p class="subtitle">Live Tracking & ETA Dashboard</p>
+        </header>
+        <div class="delivery-list" id="deliveryList">
+            <!-- Dynamic Delivery Rows Injected via JS -->
+        </div>
+
+        <button class="add-store-btn" onclick="openStoreModal()">＋ Add Store</button>
+
+    </div>
+
+    <!-- Modal Elements (Hidden by default) -->
+    <div class="modal-overlay" id="storeModal" style="display: none;">
+        <div class="modal-content">
+            <h2 id="modalTitle">Add Store</h2>
+            
+            <div class="form-group">
+                <label>Store Name</label>
+                <input type="text" id="storeNameInput" placeholder="e.g. AELIA">
+            </div>
+            
+            <div class="form-group">
+                <label>Trip Time (minutes)</label>
+                <input type="number" id="tripTimeInput" value="30" min="1">
+            </div>
+
+            <div class="form-group">
+                <label>Van Registration</label>
+                <div class="quick-pick-container">
+                    <button class="quick-pick-btn" onclick="setVanReg('HXH')">HXH</button>
+                    <button class="quick-pick-btn" onclick="setVanReg('HXF')">HXF</button>
+                    <button class="quick-pick-btn" onclick="setVanReg('HXJ')">HXJ</button>
+                </div>
+                <input type="text" id="vanRegInput" placeholder="e.g. HXH">
+            </div>
+
+            <div class="modal-actions">
+                <button class="modal-btn delete-btn" id="deleteStoreBtn" style="display: none;" onclick="deleteCurrentStore()">Delete</button>
+                <div style="flex: 1;"></div>
+                <button class="modal-btn cancel-btn" onclick="closeStoreModal()">Cancel</button>
+                <button class="modal-btn save-btn" onclick="saveStore()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Instructions / Footer -->
+    <div class="instructions">
+        Drag sliders or start auto-playback to simulate dispatch and return.
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
